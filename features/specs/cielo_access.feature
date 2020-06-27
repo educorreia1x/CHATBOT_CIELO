@@ -1,9 +1,9 @@
 Funcionalidade: Chatbot
 
-    Contexto: Pagina do Chatbot
+    Contexto: Pagina do Chatbot Cielo
         Dado que o usuario acessa o chatboot
 
-    Cenario: Acesso com sucesso
+    Cenario: Acesso com sucesso # Resolver isso <>
         Quando o usuario selecionar o assunto "Esqueci minha senha - Acesso ao Site"
         E entrar com os dados
             | nome      | email           | telefone    | cpf         | cnpj           |
@@ -14,7 +14,7 @@ Funcionalidade: Chatbot
     Cenario: Nome invalido
 
         Quando o usuario selecionar o assunto "Esqueci minha senha - Acesso ao Site"
-        E entrar com os dados
+        E entrar com o nome "ee"
             | nome |
             | ee   |
         Entao o sistema exibe uma mensagem de alerta "Nome"
@@ -22,12 +22,12 @@ Funcionalidade: Chatbot
     Cenario: E-mail invalido
 
         Quando o usuario selecionar o assunto "Esqueci minha senha - Acesso ao Site"
-        E entrar com os dados
+        E entrar com o e-mail ""
             | email  |
             | !@.com |
         Entao o sistema exibe uma mensagem de alerta "E-mail inválido! Por favor forneça um e-mail válido."
 
-    Cenario: CPF/CNPJ invalido
+    Cenario: CPF/CNPJ invalido # Arrumar <>
 
         Quando o usuario selecionar o assunto "Esqueci minha senha - Acesso ao Site"
         E entrar com os dados
@@ -39,7 +39,7 @@ Funcionalidade: Chatbot
     Cenario: Tel invalido
 
         Quando o usuario selecionar o assunto "Esqueci minha senha - Acesso ao Site"
-        E entrar com os dados
+        E entrar com o numero de telefone ""
             | telefone    |
             | 00000000000 |
         Entao o sistema exibe uma mensagem de alerta "Digite seu telefone"
